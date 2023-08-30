@@ -1,3 +1,4 @@
+import Main from "./Main/Main"
 import Navbar from "./Navbar/Navbar"
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
     <Navbar/>
+    <Main/>
     </>
   )
 }
