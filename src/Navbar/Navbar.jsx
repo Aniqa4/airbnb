@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { HiOutlineGlobeAlt } from 'react-icons/hi';
 import { FaUserCircle, FaAirbnb, FaSearch } from 'react-icons/fa';
 import { IoIosMenu } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [expand, setExpand] = useState(false);
@@ -10,11 +11,17 @@ function Navbar() {
         setExpand(true)
     }
 
+    const handleSearch = (e) => {
+
+    }
+
     return (
         <div className={expand === true ? 'flex justify-between items-center border py-5 px-20 shadow-2xl' : 'flex justify-between items-center border py-5 px-20'}>
-            <div className='flex gap-1 items-center'>
-                <p className=' text-red-600 text-4xl'><FaAirbnb /></p>
-                <h1 className=' text-red-500 text-2xl font-bold'>airbnb</h1>
+            <div>
+                <Link to='/' className='flex gap-1 items-center'>
+                    <p className=' text-red-600 text-4xl'><FaAirbnb /></p>
+                    <h1 className=' text-red-500 text-2xl font-bold'>airbnb</h1>
+                </Link>
             </div>
             <div onClick={() => handleExpand()}>
                 {
@@ -25,7 +32,7 @@ function Navbar() {
                                 <p>Experiences</p>
                                 <p>Online Experiences</p>
                             </div>
-                            <form className='flex mx-auto border rounded-full px-5 py-2'>
+                            <form onSubmit={handleSearch} className='flex mx-auto border rounded-full px-5 py-2'>
                                 <div className='grid'>
                                     <label>Where</label>
                                     <input type="text" name="location" placeholder='search destinations' />
