@@ -15,7 +15,9 @@ function Main() {
         <div className=' py-5'>
             <div className='container mx-auto grid grid-cols-5 gap-5'>
                 {
-                    data.map((x,index) =><Card key={index} photo={x.photo} hotelName={x.hotelName} location={x.Location} price={x.price}></Card>)
+                    data.map((x,index) =>
+                    <Card key={index} photo={x.photo} hotelName={x.hotelName} location={x.Location} 
+                    price={x.price} beds={x.beds} bedrooms={x.bedrooms}></Card>)
                 }
             </div>
         </div>

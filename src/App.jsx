@@ -5,6 +5,10 @@ import Navbar from "./Navbar/Navbar"
 function App() {
   const [searchedItems,setSearchedItems]=useState([])
 
+  const handleSearch=()=>{
+    
+  }
+
   return (
     <>
       <Navbar />
